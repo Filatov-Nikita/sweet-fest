@@ -1,0 +1,9 @@
+@use '../mixins/screen.scss';
+
+.wrapper {
+  padding: 0 70px;
+
+  @include screen.xl {
+    padding: 0 30px;
+  }
+}

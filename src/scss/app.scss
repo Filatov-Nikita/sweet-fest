@@ -1,4 +1,5 @@
 @use './fonts.scss';
+@use './comps/wrapper.scss';
 
 :root {
   --color-primary: #DA3D53;
@@ -7,14 +8,28 @@
   --color-white: #FFFFFF;
   --color-accent: #6F2D87;
   --color-bg: #F9F1EF;
-  --font-mont: 'montserrat',
-  --font-kisa: 'if kica',
+  --font-mont: 'montserrat';
+  --font-kisa: 'if kica';
 }
 
 body {
   font-family: 'montserrat';
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.4;
   color: var(--color-dark);
   background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
