@@ -1,0 +1,45 @@
+$xl: 1200px;
+$lg: 1090px;
+$md: 900px;
+$sm: 700px;
+$xs: 520px;
+
+@mixin screen() {
+ @content;
+}
+
+@mixin screen($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @include screen($xl) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @include screen($lg) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @include screen($md) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @include screen($sm) {
+    @content;
+  }
+}
+
+@mixin xs() {
+  @include screen($xs) {
+    @content;
+  }
+}
