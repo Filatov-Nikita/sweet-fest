@@ -1,0 +1,20 @@
+@use './fonts.scss';
+
+:root {
+  --color-primary: #DA3D53;
+  --color-secondary: #FFED00;
+  --color-dark: #0D0802;
+  --color-white: #FFFFFF;
+  --color-accent: #6F2D87;
+  --color-bg: #F9F1EF;
+  --font-mont: 'montserrat',
+  --font-kisa: 'if kica',
+}
+
+body {
+  font-family: 'montserrat';
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-dark);
+  background-color: var(--color-bg);
+}
