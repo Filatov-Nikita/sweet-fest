@@ -1,9 +1,7 @@
 <template>
-  <div>
-    1
-  </div>
+  <Landing />
 </template>
 
 <script setup>
-
+  import Landing from './components/Landing.vue';
 </script>
