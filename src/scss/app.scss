@@ -1,5 +1,7 @@
 @use './fonts.scss';
+@use './utilities.scss';
 @use './comps/wrapper.scss';
+@use './comps/heading.scss';
 
 :root {
   --color-primary: #DA3D53;
@@ -22,14 +24,21 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
 }
 
 p {
   margin: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
