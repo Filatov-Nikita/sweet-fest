@@ -4,6 +4,7 @@
     <SectionAbout class="landing__about" />
     <SectionMembers class="landing__members" />
     <SectionProgram class="landing__program" />
+    <SectionPartners class="landing__partners" />
     <SectionSubscribe class="landing__subscribe" />
     <SectionFooter class="landing__footer" />
   </main>
@@ -14,6 +15,7 @@
   import SectionMembers from './Sections/Members.vue';
   import SectionProgram from './Sections/Program.vue';
   import SectionAbout from './Sections/About.vue';
+  import SectionPartners from './Sections/Partners.vue';
   import SectionSubscribe from './Sections/Subscribe.vue';
   import SectionFooter from './Sections/Footer.vue';
 </script>
@@ -31,6 +33,10 @@
 
     &__program {
       padding: 60px 0;
+    }
+
+    &__partners {
+      padding: 60px 0 75px;
     }
 
     &__subscribe {
