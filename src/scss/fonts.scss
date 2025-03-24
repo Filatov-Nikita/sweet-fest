@@ -24,6 +24,14 @@
 
 @font-face {
   src:
+    url('/fonts/if-kica/IFKica-Regular.woff2') format('woff2'),
+    url('/fonts/if-kica/IFKica-Regular.woff') format('woff');
+  font-family: 'if kica';
+  font-weight: 400;
+}
+
+@font-face {
+  src:
     url('/fonts/if-kica/IFKica-Bold.woff2') format('woff2'),
     url('/fonts/if-kica/IFKica-Bold.woff') format('woff');
   font-family: 'if kica';
