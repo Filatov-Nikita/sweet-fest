@@ -10,12 +10,12 @@
         <div class="body-wrap">
           <h2 v-if="grid.lg" class="h2 h2--red title">Подписывайтесь на&nbsp;нас!</h2>
           <p class="text">Тайный ингредиент фестиваля — ты. Ждем!<br/>Подпишись в телеграм – не пропусти анонсы.</p>
-          <BaseButton v-if="grid.md" class="action" tag="a" href="#" target="_blank">
+          <BaseButton v-if="grid.md" class="action" tag="a" href="https://t.me/food_park_aura" target="_blank">
             Подписаться
           </BaseButton>
         </div>
       </div>
-      <BaseButton v-if="!grid.md" class="action" tag="a" href="#" target="_blank">
+      <BaseButton v-if="!grid.md" class="action" tag="a" href="https://t.me/food_park_aura" target="_blank">
         Подписаться
       </BaseButton>
     </div>

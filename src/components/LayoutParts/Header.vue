@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <a class="logo" href="#" target="_blank">
+    <a class="logo" href="https://aura.planeta-mall.ru/" target="_blank">
       <img class="logo__img" width="155" height="37" src="@/assets/images/logo-aura.svg" alt="Логотип Аура">
     </a>
     <Nav />
@@ -26,6 +26,11 @@
 
   .logo {
     width: 155px;
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &__img {
       width: 100%;

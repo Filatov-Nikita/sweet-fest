@@ -5,7 +5,7 @@
       'tg-link--white': color === 'white',
       'tg-link--black': color === 'black',
     }"
-    href="#"
+    href="https://t.me/food_park_aura"
     target="_blank"
   >
     <IconTg class="tg-link__icon" />
