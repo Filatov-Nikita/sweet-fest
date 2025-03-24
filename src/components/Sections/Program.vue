@@ -1,5 +1,5 @@
 <template>
-  <section id="members">
+  <section id="program">
     <div class="wrapper">
       <h2 class="h2 title">Программа</h2>
       <ProgTabs class="prog-tabs" :activeTab="activeTab" @change:tab="activeTab = $event; swiper?.slideTo($event)" />
