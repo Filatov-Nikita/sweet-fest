@@ -11,8 +11,8 @@
           <img class="logo__img" :width="item.logo.width" :height="item.logo.height" :src="item.logo.src" />
         </div>
         <div class="name">{{ item.name }}</div>
-        <p class="text">{{ item.text }}</p>
-        <p class="caption">{{ item.caption }}</p>
+        <p class="text" v-html="item.text"></p>
+        <p class="caption" v-if="item.caption">{{ item.caption }}</p>
       </div>
     </div>
   </Modal>
@@ -70,11 +70,10 @@
     margin-bottom: 14px;
   }
 
-  .text {
-    margin-bottom: 16px;
-  }
+  .text {}
 
   .caption {
+    margin-top: 16px;
     font-weight: 500;
     font-size: 15px;
     color: var(--color-primary);
