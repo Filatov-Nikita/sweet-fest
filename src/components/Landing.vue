@@ -4,6 +4,7 @@
     <SectionAbout class="landing__about" />
     <SectionMembers class="landing__members" />
     <SectionProgram class="landing__program" />
+    <SectionFooter class="landing__footer" />
   </main>
 </template>
 
@@ -12,6 +13,7 @@
   import SectionMembers from './Sections/Members.vue';
   import SectionProgram from './Sections/Program.vue';
   import SectionAbout from './Sections/About.vue';
+  import SectionFooter from './Sections/Footer.vue';
 </script>
 
 <style scoped lang="scss">
@@ -27,6 +29,10 @@
 
     &__program {
       padding: 60px 0;
+    }
+
+    &__footer {
+      padding: 75px 0;
     }
   }
 </style>
