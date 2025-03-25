@@ -12,13 +12,13 @@
         <img width="50" height="50" src="@/assets/images/decor/sweet.png" loading="lazy" />
       </div>
       <h3 class="item__title">Конкурс «Сибирский&nbsp;леденец»</h3>
-      <p class="item__text">Создай сладость размером с амбиции</p>
+      <p class="item__text">Создай сладость размером с&nbsp;амбиции</p>
     </article>
     <article class="item">
       <div class="item__icon">
         <img width="50" height="50" src="@/assets/images/decor/icecream.png" loading="lazy" />
       </div>
-      <h3 class="item__title">Сладкие мастер-классы и фотозона</h3>
+      <h3 class="item__title">Сладкие мастер-классы и&nbsp;фотозона</h3>
       <p class="item__text">Для твоих ярких воспоминаний</p>
     </article>
   </div>
@@ -33,6 +33,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+
+    @include md {
+      justify-content: center;
+    }
+
+    @include sm {
+      margin: -10px;
+    }
   }
 
   .item {
@@ -43,6 +51,15 @@
     border-radius: 30px;
     background: linear-gradient(90deg, #f2826f 0%, #fd556f 100%);
     color: var(--color-white);
+
+    @include md {
+      width: calc(50% - 30px);
+    }
+
+    @include sm {
+      margin: 10px;
+      width: calc(100% - 20px);
+    }
 
     &__icon {
       width: fit-content;

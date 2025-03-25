@@ -5,7 +5,7 @@ export default function() {
     xxl: 1280.1,
     xl: 1120.1,
     lg: 920.1,
-    md: 720.1,
+    md: 700.1,
     sm: 520.1,
     xs: 0,
   });
