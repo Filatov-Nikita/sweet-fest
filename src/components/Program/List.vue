@@ -11,6 +11,7 @@
 <script setup>
   import { onMounted, ref } from 'vue';
   import ListItem from './ListItem.vue';
+  import useAppGrid from '@/composables/useAppGrid';
 
   defineProps({
     items: {
@@ -19,9 +20,13 @@
     }
   });
 
+  const grid = useAppGrid();
+
   onMounted(() => {
-    fixHeight();
-    window.addEventListener('load', fixHeight);
+    if(grid.sm) {
+      fixHeight();
+      window.addEventListener('load', fixHeight);
+    }
   });
 
   const itemsRef = ref(null);
@@ -54,11 +59,30 @@
     flex-wrap: wrap;
     margin-left: -50px;
     margin-top: -50px;
+
+    @include xs {
+      margin-left: -30px;
+      margin-top: -30px;
+    }
   }
 
   .prog-item {
     margin-left: 50px;
     margin-top: 50px;
     width: calc(25% - 50px);
+
+    @include xl {
+      width: calc(33.3% - 50px);
+    }
+
+    @include md {
+      width: calc(50% - 50px);
+    }
+
+    @include xs {
+      margin-left: 30px;
+      margin-top: 30px;
+      width: calc(100% - 30px);
+    }
   }
 </style>

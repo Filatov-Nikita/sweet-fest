@@ -248,10 +248,18 @@
   .title {
     text-align: center;
     margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 
   .prog-tabs {
     margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 
   .row1 :deep(.prog-item .dates) {
