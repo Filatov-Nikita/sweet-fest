@@ -41,6 +41,10 @@
     overflow: hidden;
     border-radius: 30px;
 
+    @include sm {
+      margin-bottom: 10px;
+    }
+
     &__img {
       transition: transform 150ms;
       width: 100%;
@@ -52,5 +56,15 @@
     font-size: 20px;
     line-height: 1.35;
     margin-bottom: 4px;
+
+    @include sm {
+      font-size: 16px;
+    }
+  }
+
+  .text {
+    @include sm {
+      font-size: 13px;
+    }
   }
 </style>

@@ -40,6 +40,11 @@
     border-radius: 30px;
     padding: 60px;
     padding-top: 40px;
+
+    @include sm {
+      padding: 15px;
+      padding-bottom: 30px;
+    }
   }
 
   .btn-close {

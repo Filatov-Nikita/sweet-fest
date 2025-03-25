@@ -43,6 +43,11 @@
       font-family: var(--font-kisa);
       text-transform: uppercase;
       margin-bottom: 20px;
+
+      @include sm {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -51,6 +56,10 @@
     max-width: 320px;
     margin: 0 auto;
     text-align: center;
+
+    @include sm {
+      max-width: 250px;
+    }
 
     &:hover {
       .photo__img {

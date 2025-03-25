@@ -174,6 +174,10 @@
     line-height: 1;
     margin-bottom: 50px;
 
+    @include sm {
+      margin-bottom: 30px;
+    }
+
     &__w1, &__w2 {
       display: inline-block;
     }
@@ -186,5 +190,9 @@
 
   .members-gen {
     margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 </style>

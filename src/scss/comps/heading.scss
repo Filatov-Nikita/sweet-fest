@@ -1,6 +1,24 @@
+@use '../mixins/screen.scss';
+
 .h2, h2 {
   font-family: var(--font-kisa);
   font-weight: 600;
   font-size: 70px;
   text-transform: uppercase;
+
+  @include screen.lg {
+    font-size: 56px;
+  }
+
+  @include screen.md {
+    font-size: 46px;
+  }
+
+  @include screen.xs {
+    font-size: 35px;
+  }
+
+  @include screen.screen(355px) {
+    font-size: 30px;
+  }
 }

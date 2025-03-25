@@ -29,6 +29,11 @@
     justify-content: center;
     margin-left: -40px;
     margin-top: -40px;
+
+    @include sm {
+      margin-left: -15px;
+      margin-top: -30px;
+    }
   }
 
   .members-item {
@@ -45,7 +50,13 @@
     }
 
     @include sm {
-      width: calc(100% - 40px);
+      margin-left: 15px;
+      margin-top: 30px;
+      width: calc(50% - 15px);
+    }
+
+    @include screen(355px) {
+      width: calc(100% - 15px);
     }
   }
 </style>
