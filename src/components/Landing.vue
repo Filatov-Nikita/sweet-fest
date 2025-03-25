@@ -25,26 +25,51 @@
     &__about {
       padding-top: 100px;
       padding-bottom: 60px;
+
+      @include sm {
+        padding-top: 40px;
+        padding-bottom: 35px;
+      }
     }
 
     &__members {
       padding: 60px 0;
+
+      @include sm {
+        padding: 35px 0;
+      }
     }
 
     &__program {
       padding: 60px 0;
+
+      @include sm {
+        padding: 35px 0;
+      }
     }
 
     &__partners {
       padding: 60px 0 75px;
+
+      @include sm {
+        padding: 35px 0;
+      }
     }
 
     &__subscribe {
       padding: 75px 0;
+
+      @include sm {
+        padding: 35px 0;
+      }
     }
 
     &__footer {
       padding: 75px 0;
+
+      @include sm {
+        padding: 35px 0;
+      }
     }
   }
 </style>

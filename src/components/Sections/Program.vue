@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h2 class="h2 title">Программа</h2>
       <ProgTabs class="prog-tabs" :activeTab="activeTab" @change:tab="activeTab = $event; swiper?.slideTo($event)" />
-      <Swiper @swiper="swiper = $event">
+      <Swiper :allowTouchMove="false" @swiper="swiper = $event">
         <SwiperSlide key="0">
           <ProgList class="row1" :items="items[0]" />
         </SwiperSlide>
