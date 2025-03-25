@@ -30,7 +30,7 @@
 
 <style scoped lang="scss">
   .tabs {
-    overflow-x: scroll;
+    overflow-y: hidden;
     width: fit-content;
     max-width: 100%;
     padding-bottom: 15px;

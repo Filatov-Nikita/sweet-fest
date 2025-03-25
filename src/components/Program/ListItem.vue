@@ -5,7 +5,7 @@
     </div>
     <h3 class="name">{{ item.name }}</h3>
     <div class="text" v-html="item.text"></div>
-    <div class="dates">
+    <div class="dates" v-if="item.dates.length > 0">
       <p class="date" v-for="date in item.dates">{{ date }}</p>
     </div>
     <p class="caption" v-if="item.caption">{{ item.caption }}</p>
@@ -44,6 +44,7 @@
   }
 
   .date {
+    margin-top: 16px;
     font-weight: 500;
     font-size: 15px;
     color: var(--color-primary);
@@ -52,7 +53,6 @@
   .text {
     min-height: var(--textMaxHeight);
     font-size: 15px;
-    margin-bottom: 16px;
   }
 
   .caption {
