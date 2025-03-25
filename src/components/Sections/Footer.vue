@@ -19,6 +19,11 @@
     overflow: hidden;
     border-radius: 50px;
 
+    @include sm {
+      margin-bottom: 40px;
+      border-radius: 20px;
+    }
+
     &__img {
       width: 100%;
     }
