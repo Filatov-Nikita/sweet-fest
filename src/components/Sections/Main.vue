@@ -12,12 +12,12 @@
             <span class="title__w2">фест</span>
           </h1>
           <div class="text">
-            <p class="text__p1">Сладкий ажиотаж в Ауре!</p>
-            <p class="text__p2">Вход свободный – калории за наш счет</p>
+            <p class="text__p1">Сладкий ажиотаж в&nbsp;Ауре!</p>
+            <p class="text__p2">Вход свободный – калории за&nbsp;наш счет</p>
           </div>
         </div>
         <div class="section-main__right">
-          <img width="1107" height="938" src="@/assets/images/ponchik.png" alt="" />
+          <img class="photo" width="1107" height="938" src="@/assets/images/ponchik.png" alt="" />
         </div>
       </div>
     </div>
@@ -30,7 +30,6 @@
 
 <style scoped lang="scss">
   .section-main {
-    min-height: 500px;
     background: linear-gradient(90deg, #f2826f 0%, #fd556f 100%);
 
     &__grid {
@@ -44,15 +43,51 @@
         padding-top: 15px;
         padding-bottom: 60px;
       }
+
+      @include md {
+        padding-top: 0px;
+        padding-bottom: 40px;
+        column-gap: 30px;
+      }
+
+      @include sm {
+        column-gap: 0px;
+        row-gap: 32px;
+      }
     }
 
     &__left {
-      width: calc(50% - 25px);
-      padding-top: 40px;
+      width: calc(45% - 25px);
+      padding-top: 30px;
+
+      @include md {
+        padding-top: 20px;
+        width: calc(50% - 15px);
+      }
+
+      @include sm {
+        width: 100%;
+      }
     }
 
     &__right {
-      width: calc(50% - 25px);
+      width: calc(55% - 25px);
+
+      @include md {
+        width: calc(50% - 15px);
+      }
+
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+
+  .photo {
+    @include sm {
+      max-width: 520px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -69,7 +104,12 @@
 
     @include lg {
       margin-bottom: 40px;
-      font-size: 80px;
+      font-size: 70px;
+    }
+
+    @include md {
+      font-size: 50px;
+      margin-bottom: 30px;
     }
 
     &__w1, &__w2 {
@@ -88,14 +128,28 @@
 
   .text {
     color: var(--color-white);
+    font-size: 100px;
+
+    @include xl {
+      font-size: 90px;
+    }
+
+    @include lg {
+      font-size: 70px;
+    }
 
     &__p1 {
-      font-size: 30px;
+      font-size: 0.3em;
       font-weight: 600;
     }
 
     &__p2 {
-      font-size: 20px;
+      margin-top: 12px;
+      font-size: 0.2em;
+
+      @include md {
+        margin-top: 8px;
+      }
     }
   }
 
@@ -105,7 +159,11 @@
 
     @include lg {
       margin-bottom: 20px;
-      max-width: 300px;
+      max-width: 280px;
+    }
+
+    @include md {
+      max-width: 180px;
     }
 
     &__img {
