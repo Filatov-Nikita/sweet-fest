@@ -20,7 +20,6 @@
         <SwiperSlide class="slide">
           <img width="234" height="62" src="@/assets/images/partners/12.png" loading="lazy" />
         </SwiperSlide>
-
       </Swiper>
 
       <Swiper
@@ -57,6 +56,9 @@
         </SwiperSlide>
         <SwiperSlide class="slide">
           <img width="116" height="116" src="@/assets/images/partners/9.png" loading="lazy" />
+        </SwiperSlide>
+        <SwiperSlide class="slide">
+          <img width="183" height="100" src="@/assets/images/partners/13.png" loading="lazy" />
         </SwiperSlide>
       </Swiper>
     </div>
