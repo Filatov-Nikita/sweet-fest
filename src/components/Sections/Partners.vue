@@ -94,12 +94,21 @@
     margin-bottom: 60px;
 
     @include sm {
+      row-gap: 32px;
       column-gap: 40px;
       margin-bottom: 50px;
     }
   }
 
   .logo-item {
+    &:nth-child(1) {
+      img {
+        @include sm {
+          width: 145px;
+        }
+      }
+    }
+
     &:nth-child(2) {
       @include md {
         order: -1;
@@ -107,6 +116,18 @@
 
         img {
           margin: 0 auto;
+
+          @include sm {
+            width: 183px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        @include sm {
+          width: 175px;
         }
       }
     }

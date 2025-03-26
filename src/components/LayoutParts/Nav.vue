@@ -1,14 +1,20 @@
 <template>
   <nav class="nav">
-    <a class="nav__item" href="#about">Описание</a>
-    <a class="nav__item" href="#members">Участники</a>
-    <a class="nav__item" href="#program">Программа</a>
-    <a class="nav__item" href="#partners">Партнеры</a>
+    <a class="nav__item" href="#about" @click.prevent="scroll">Описание</a>
+    <a class="nav__item" href="#members" @click.prevent="scroll">Участники</a>
+    <a class="nav__item" href="#program" @click.prevent="scroll">Программа</a>
+    <a class="nav__item" href="#partners" @click.prevent="scroll">Партнеры</a>
   </nav>
 </template>
 
 <script setup>
-
+  function scroll(e) {
+    const id = e.target.getAttribute('href');
+    if(!id) return;
+    const el = document.querySelector(id);
+    if(!el) return;
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 </script>
 
 <style scoped lang="scss">

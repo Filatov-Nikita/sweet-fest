@@ -30,7 +30,7 @@
   .title {
     font-size: 42px;
     letter-spacing: 0.01em;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 24px;
 
     @include lg {
