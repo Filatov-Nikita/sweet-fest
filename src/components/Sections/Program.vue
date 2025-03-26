@@ -3,7 +3,16 @@
     <div class="wrapper">
       <h2 class="h2 title">Программа</h2>
       <ProgTabs class="prog-tabs" :activeTab="activeTab" @change:tab="activeTab = $event; swiper?.slideTo($event)" />
-      <Swiper :allowTouchMove="false" @swiper="swiper = $event">
+      <Swiper
+        :key="swiperKey"
+        :initialSlide="activeTab"
+        :allowTouchMove="false"
+        autoHeight
+        :breakpoints="{
+          '1120.1': { autoHeight: false }
+        }"
+        @swiper="swiper = $event"
+      >
         <SwiperSlide key="0">
           <ProgList class="row1" :items="items[0]" />
         </SwiperSlide>
@@ -24,11 +33,18 @@
 <script setup>
   import ProgTabs from '@/components/Program/Tabs.vue';
   import ProgList from '@/components/Program/List.vue';
+  import useAppGrid from '@/composables/useAppGrid';
   import { Swiper, SwiperSlide } from 'swiper/vue';
-  import { ref } from 'vue';
+  import { ref, watch } from 'vue';
 
+  const swiperKey = ref(0);
   const activeTab = ref(0);
   const swiper = ref(null);
+
+  const grid = useAppGrid();
+
+  watch(() => grid.breakpoint, () => swiperKey.value++);
+  window.addEventListener('load', () => swiperKey.value++);
 
   const items = [
     [

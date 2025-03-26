@@ -23,9 +23,9 @@
   const grid = useAppGrid();
 
   onMounted(() => {
+    resetHeight();
     if(grid.sm) {
       fixHeight();
-      window.addEventListener('load', fixHeight);
     }
   });
 
@@ -39,6 +39,13 @@
       };
     });
     return maxHeight;
+  }
+
+  function resetHeight() {
+    itemsRef.value.style.removeProperty('--logoMaxHeight');
+    itemsRef.value.style.removeProperty('--nameMaxHeight');
+    itemsRef.value.style.removeProperty('--textMaxHeight');
+    itemsRef.value.style.removeProperty('--datesMaxHeight');
   }
 
   function fixHeight() {
