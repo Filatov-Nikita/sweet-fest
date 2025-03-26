@@ -2,32 +2,29 @@
   <section id="partners">
     <div class="wrapper">
       <h2 class="h2 title">Партнеры</h2>
-      <Swiper
-        class="swiper1"
-        :slidesPerView="'auto'"
-        :spaceBetween="70"
-        :modules="[ Autoplay ]"
-        :autoplay="{
-          delay: 5000,
-        }"
-      >
-        <SwiperSlide class="slide">
+      <div class="logos">
+        <div class="logo-item">
           <img width="172" height="72" src="@/assets/images/partners/10.png" loading="lazy" />
-        </SwiperSlide>
-        <SwiperSlide class="slide">
+        </div>
+        <div class="logo-item">
           <img width="249" height="72" src="@/assets/images/partners/11.png" loading="lazy" />
-        </SwiperSlide>
-        <SwiperSlide class="slide">
+        </div>
+        <div class="logo-item">
           <img width="234" height="62" src="@/assets/images/partners/12.png" loading="lazy" />
-        </SwiperSlide>
-      </Swiper>
+        </div>
+      </div>
 
       <Swiper
         :slidesPerView="'auto'"
-        :spaceBetween="70"
+        :spaceBetween="40"
         :modules="[ Autoplay ]"
         :autoplay="{
           delay: 3000,
+        }"
+        :breakpoints="{
+          '700.1': {
+            spaceBetween: 70,
+          }
         }"
       >
         <SwiperSlide class="slide">
@@ -74,6 +71,10 @@
   .title {
     text-align: center;
     margin-bottom: 60px;
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 
   .slide {
@@ -84,9 +85,30 @@
     height: auto !important;
   }
 
-  .swiper1 {
-    max-width: 828px;
-    margin: 0 auto;
-    margin-bottom: 54px;
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 70px;
+    row-gap: 40px;
+    margin-bottom: 60px;
+
+    @include sm {
+      column-gap: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .logo-item {
+    &:nth-child(2) {
+      @include md {
+        order: -1;
+        width: 100%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 </style>
