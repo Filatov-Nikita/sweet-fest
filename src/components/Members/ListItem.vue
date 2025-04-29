@@ -1,7 +1,7 @@
 <template>
   <article class="item">
     <div class="photo">
-      <img class="photo__img" width="290" height="290" :src="item.preview" loading="lazy" />
+      <Image class="photo__img" width="290" height="290" :src="item.preview" loading="lazy" />
     </div>
     <h3 class="title">{{ item.name }}</h3>
     <p class="text">{{ item.description }}</p>
@@ -9,6 +9,8 @@
 </template>
 
 <script setup>
+  import Image from '@/components/Base/Image.vue';
+
   defineProps({
     item: {
       required: true,

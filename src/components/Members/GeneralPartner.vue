@@ -3,7 +3,7 @@
     <h3 class="section-gen-partner__title">Генеральный партнер</h3>
     <article class="item" @click="showed = true">
       <div class="photo">
-        <img class="photo__img" width="320" height="320" :src="item.preview" loading="lazy" />
+        <Image class="photo__img" width="320" height="320" :src="item.preview" loading="lazy" />
       </div>
       <h4 class="title">{{ item.name }}</h4>
       <p class="text">{{ item.description }}</p>
@@ -15,6 +15,7 @@
 <script setup>
   import { ref } from 'vue';
   import ModalShow from './ModalShow.vue';
+  import Image from '@/components/Base/Image.vue';
 
   const showed = ref(false);
 

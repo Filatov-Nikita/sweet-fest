@@ -1,7 +1,7 @@
 <template>
   <article>
     <div class="logo">
-      <img class="logo__img" :width="item.logo.width" :height="item.logo.height" :src="item.logo.src" />
+      <Image class="logo__img" :width="item.logo.width" :height="item.logo.height" :src="item.logo.src" />
     </div>
     <h3 class="name">{{ item.name }}</h3>
     <div class="text" v-html="item.text"></div>
@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+  import Image from '@/components/Base/Image.vue';
+
   defineProps({
     item: {
       required: true,

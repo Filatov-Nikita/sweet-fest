@@ -8,7 +8,7 @@
       </div>
       <div class="body">
         <div class="logo">
-          <img class="logo__img" :width="item.logo.width" :height="item.logo.height" :src="item.logo.src" />
+          <Image class="logo__img" :width="item.logo.width" :height="item.logo.height" :src="item.logo.src" />
         </div>
         <div class="name">{{ item.name }}</div>
         <p class="text" v-html="item.text"></p>
@@ -21,6 +21,7 @@
 <script setup>
   import Modal from '@/components/Base/Modal.vue';
   import IconClose from '@/components/Icons/Close.vue';
+  import Image from '@/components/Base/Image.vue';
 
   defineProps({
     item: {
