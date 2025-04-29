@@ -6,6 +6,7 @@
     <SectionProgram class="landing__program" />
     <SectionPartners class="landing__partners" />
     <SectionSubscribe class="landing__subscribe" />
+    <SectionVideo class="landing__video" />
     <SectionFooter class="landing__footer" />
   </main>
 </template>
@@ -18,6 +19,7 @@
   import SectionPartners from './Sections/Partners.vue';
   import SectionSubscribe from './Sections/Subscribe.vue';
   import SectionFooter from './Sections/Footer.vue';
+  import SectionVideo from './Sections/Video.vue';
 </script>
 
 <style scoped lang="scss">
@@ -61,6 +63,14 @@
 
       @include sm {
         padding: 35px 0;
+      }
+    }
+
+    &__video {
+      padding: 50px 0;
+
+      @include sm {
+        padding: 25px 0;
       }
     }
 

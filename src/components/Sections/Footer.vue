@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="wrapper">
-      <div class="photo">
+      <!-- <div class="photo">
         <img class="photo__img" width="1300" height="730" src="@/assets/images/banner.jpg" loading="lazy" alt="" />
-      </div>
+      </div> -->
       <Footer />
     </div>
   </div>
